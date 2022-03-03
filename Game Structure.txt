@@ -1,0 +1,8 @@
+Game Class
+    Player Class
+        Dice Roll
+    Game Event Class
+        No Play
+        Ladder
+        Snake
+Game Class Will Keep the track of the game event and the dice roll
