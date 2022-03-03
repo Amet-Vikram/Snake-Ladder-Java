@@ -25,9 +25,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
         int playerPos = 0;
-//        System.out.println(rollNumber);
+        int diceRollCount = 1;
+        //Main Game
         while (true){
+            diceRollCount++;
             int rollNumber = dice();
             System.out.println(rollNumber);
             switch (GameEvent()) {
@@ -35,6 +38,7 @@ public class Main {
                 case 1 -> {
                     if (playerPos + rollNumber == 100){
                         System.out.println("You Won");
+                        System.out.println("Dice was rolled " + diceRollCount + "Times");
                         System.exit(0);
                     }
                     else if (playerPos + rollNumber > 100){
@@ -54,8 +58,6 @@ public class Main {
                         System.out.println("SNAKES. Go back " + rollNumber + " steps.");
                         playerPos -= rollNumber;
                     }
-
-
                 }
             }
             System.out.println("You are at: " + playerPos);
