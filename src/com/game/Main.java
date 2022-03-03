@@ -12,6 +12,7 @@ public class Main {
         System.out.print("Roll the Dice (True/False) ? ");
         boolean playerEvent = scanner.nextBoolean();
         if (playerEvent) {
+            System.out.print("You got - ");
             return random.nextInt(6) + 1;
         }
         else {
@@ -20,8 +21,17 @@ public class Main {
         }
     }
 
+    static int GameEvent(){
+        return random.nextInt(3);
+    }
+
     public static void main(String[] args) {
         int rollNumber = dice();
         System.out.println(rollNumber);
+        switch (GameEvent()) {
+            case 0 -> System.out.println("No Play!");
+            case 1 -> System.out.println("Ladder. Move Ahead " + rollNumber + " steps.");
+            case 2 -> System.out.println("Snakes. Go back " + rollNumber + " steps.");
+        }
     }
 }
