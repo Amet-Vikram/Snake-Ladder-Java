@@ -1,8 +1,24 @@
-Game Class
-    Player Class
-        Dice Roll
-    Game Event Class
+Main Class
+    Player Objects
+    While Loop
+        Winner(Which player reaches 100 first)
+        Update player position
+            Dice Roll by each player (On Input)
+            Move Based on Game Event for each player
+                Add limits for above 100 (No Move) and below 0 (Reset)
+            Update Roll Count for each player.
+
+Player Class
+    Game event method
+    Position
+    Dice Roll Count
+    Dice Roll(Random)
+    Game Event Class (Random)
         No Play
         Ladder
         Snake
-Game Class Will Keep the track of the game event and the dice roll
+Main Class Will Keep the track of the game event and the dice roll
+
+Flow
+Display Welcome -> Player 1 chance -> Enter true to roll the dice -> Print the num on dice -> Random Option (0, 1, 2)
+-> move the player -> Switch the player -> repeat till position 100 is reached -> display You Won.
